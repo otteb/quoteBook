@@ -1,0 +1,47 @@
+  <!doctype html>
+  <html ng-app="quoteBook">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./reset.css">
+      <!--These will be the custom styles-->
+      <link rel="stylesheet" href="./stylesheet.css">
+      <title>title here</title>
+  </head>
+  <body ng-controller="mainCtrl">
+      <header class="main-header">
+        <div class="main-logo">Quote Book</div>
+        <div class="nav-tags">
+          <div class="nav-tag">Home</div>
+          <div class="nav-tag">Historical Quotes</div>
+          <div class="nav-tag">Funny Quotes</div>
+          <div class="nav-tag">About Quote Book</div>
+          <div class="nav-tag">Contact Us</div>
+      </div>
+      </header>
+      <main class="main-container">
+        <div class="quotes-container">
+          <div ng-repeat="quote in quotes | filter: filterText">
+            <span>{{quote.text}}</span>
+            <span>{{quote.author}}</span>
+            <button ng-click="removeQuote(quote.text)">delete</button>
+
+          </div>
+        </div>
+        <input class="quote-input" ng-model="newQuoteText" placeholder="Quote Text"/>
+        <input class="author-input" ng-model="newAuthor" placeholder="Author Name" />
+        <button ng-click="addQuote()">add quote</button>
+
+        <div class='filter'>
+      Filter: <input type="text" ng-model='filterText' placeholder="Enter Key Letters"/>
+    </div>
+
+
+
+    </main>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+     <script src="app.js"></script>
+     <script src="controller.js"></script>
+     <script src="service.js"></script>
+</body>
+</html>

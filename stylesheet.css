@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header{
+  width: 100vw;
+  height: 10vh;
+  /*background-color: red;*/
+  background-color: #00A6FF;
+  display:flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.main-logo {
+  color: white;
+  text-align: center;
+  font-size: 5em;
+}
+.nav-tags {
+
+display: flex;
+justify-content: space-around;
+text-align: center;
+}
+.nav-tag {
+  width: 100%;
+  height: 30%;
+  color: white;
+  display: inline-block;
+}
+
+.main-container {
+  width: 90vw;
+  height: auto;
+  margin-top: 2vh;
+
+
+}
+.quotes-container {
+  margin-bottom: 2vh;
+
+}
+
+.quote-input {
+  width: 300px;
+  display: inline-block;
+}
+.author-input {
+  width: 300px;
+  display: inline-block;
+}
+.filter {
+  margin-top: 2vh;
+}
